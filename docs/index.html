@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Vishakh Talak - Full Stack Developer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Vishakh Talak, Full Stack Developer with 7+ years experience in .NET, Angular, and SQL Server" />
+    <meta name="keywords" content="Full Stack Developer, .NET, Angular, SQL Server, Software Engineer, Portfolio" />
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Vishakh Talak - Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Professional portfolio showcasing 7+ years of software development experience with modern web technologies" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN for quick deployment -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'portfolio-primary': 'hsl(221, 83%, 53%)',
+              'portfolio-secondary': 'hsl(215, 28%, 17%)', 
+              'portfolio-accent': 'hsl(217, 91%, 60%)'
+            },
+            fontFamily: {
+              'inter': ['Inter', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        scroll-behavior: smooth;
+      }
+      
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-in-out;
+      }
+      
+      .animate-slide-up {
+        animation: slideUp 0.6s ease-out;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-slate-200 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="text-xl font-bold text-blue-600">Vishakh Talak</div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">Home</a>
+            <a href="#about" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">About</a>
+            <a href="#skills" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">Skills</a>
+            <a href="#experience" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">Experience</a>
+            <a href="#projects" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">Projects</a>
+            <a href="#contact" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-16 bg-gradient-to-br from-slate-50 to-blue-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in">
+            <h1 class="text-4xl lg:text-6xl font-bold text-slate-800 mb-6">
+              Hi, I'm <span class="text-blue-600">Vishakh</span>
+            </h1>
+            <h2 class="text-xl lg:text-2xl text-slate-600 mb-6">Full Stack Developer</h2>
+            <p class="text-lg text-slate-700 mb-8 leading-relaxed">
+              A career-driven individual with 7+ years of experience in building scalable web applications 
+              and delivering robust software solutions using .NET, Angular, and SQL Server.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+              <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-center">
+                Get In Touch
+              </a>
+              <a href="mailto:vishakh_talak@outlook.com" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center">
+                📥 Contact Me
+              </a>
+            </div>
+            <div class="flex space-x-6">
+              <a href="mailto:vishakh_talak@outlook.com" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">
+                📧
+              </a>
+              <a href="tel:+919673366165" class="text-slate-600 hover:text-blue-600 transition-colors duration-200">
+                📞
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center animate-slide-up">
+            <div class="w-80 h-80 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-2xl">
+              <div class="w-72 h-72 bg-white rounded-full flex items-center justify-center">
+                <div class="text-slate-300 text-8xl">👨‍💻</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">About Me</h2>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Passionate about creating innovative solutions and delivering value-driven results in fast-paced environments
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-slide-up">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-6">My Journey</h3>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              With over 7 years of experience in full software development life cycle, I specialize in 
+              building scalable web applications using modern technologies. My expertise spans across 
+              full-stack development, from designing intuitive user interfaces to architecting robust backend systems.
+            </p>
+            <p class="text-slate-700 mb-6 leading-relaxed">
+              I'm proficient in identifying and debugging complex issues to ensure smooth application performance, 
+              with a strong focus on delivering high-quality solutions that meet business objectives.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center p-4 bg-slate-50 rounded-lg">
+                <div class="text-3xl font-bold text-blue-600 mb-2">7+</div>
+                <div class="text-slate-600">Years Experience</div>
+              </div>
+              <div class="text-center p-4 bg-slate-50 rounded-lg">
+                <div class="text-3xl font-bold text-blue-600 mb-2">Many</div>
+                <div class="text-slate-600">Projects Completed</div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-slide-up">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-6">Core Competencies</h3>
+            <ul class="space-y-4">
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">Full-Stack Application Development</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">Debugging & Bug Fixing</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">Design, Coding & Development</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">Requirement Gathering</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">API Design & Integration</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">UI/UX Engineering</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">Database Management</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-blue-600 mr-3">✓</span>
+                <span class="text-slate-700">Legacy Modernization</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Technical Skills</h2>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Expertise across modern web technologies and frameworks
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 animate-slide-up">
+            <div class="text-blue-600 mb-4 text-2xl">💻</div>
+            <h3 class="text-xl font-semibold text-slate-800 mb-4">Programming Languages</h3>
+            <div class="space-y-2">
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">C#</span>
+              <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">TypeScript</span>
+              <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">SQL</span>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 animate-slide-up">
+            <div class="text-blue-600 mb-4 text-2xl">🎨</div>
+            <h3 class="text-xl font-semibold text-slate-800 mb-4">Frontend Technologies</h3>
+            <div class="space-y-2">
+              <span class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Angular</span>
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">jQuery</span>
+              <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Bootstrap</span>
+              <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">HTML5/CSS3</span>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 animate-slide-up">
+            <div class="text-blue-600 mb-4 text-2xl">⚙️</div>
+            <h3 class="text-xl font-semibold text-slate-800 mb-4">Backend & Database</h3>
+            <div class="space-y-2">
+              <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">.NET</span>
+              <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">ASP.NET Web API</span>
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Entity Framework</span>
+              <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">SQL Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Work Experience</h2>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Professional journey building enterprise-grade applications
+          </p>
+        </div>
+        <div class="relative">
+          <div class="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-blue-600"></div>
+          
+          <div class="relative flex flex-col md:flex-row items-start md:items-center mb-12">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-md z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2"></div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8">
+              <div class="bg-slate-50 p-6 rounded-xl animate-slide-up">
+                <h3 class="text-xl font-semibold text-slate-800 mb-2">Software Developer – III</h3>
+                <h4 class="text-blue-600 font-medium mb-2">UST Global, Bangalore</h4>
+                <p class="text-slate-600 mb-4">July 2022 – Present</p>
+                <ul class="text-slate-700 space-y-2">
+                  <li>• Full-stack development for enterprise-grade web applications using Angular 14, ASP.NET Web API, and SQL Server</li>
+                  <li>• Designed and developed modular, reusable UI components and scalable RESTful APIs</li>
+                  <li>• Optimized API performance, significantly reducing response times across critical endpoints</li>
+                  <li>• Collaborated closely with QA, DevOps, and product teams in an Agile environment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative flex flex-col md:flex-row-reverse items-start md:items-center mb-12">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-md z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2"></div>
+            <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8">
+              <div class="bg-slate-50 p-6 rounded-xl animate-slide-up">
+                <h3 class="text-xl font-semibent text-slate-800 mb-2">Senior Software Engineer</h3>
+                <h4 class="text-blue-600 font-medium mb-2">Compdhenu Software Solutions, Goa</h4>
+                <p class="text-slate-600 mb-4">December 2017 – July 2022</p>
+                <ul class="text-slate-700 space-y-2">
+                  <li>• Engineered Angular-based Single Page Applications (SPAs) with dynamic routing and reusable services for B2B platforms</li>
+                  <li>• Developed backend services and data access layers using ASP.NET Web API and Entity Framework</li>
+                  <li>• Migrated legacy AngularJS interfaces to Angular 8+, enhancing performance and client satisfaction</li>
+                  <li>• Designed optimized stored procedures and complex SQL queries, significantly reducing database load times</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Showcase of key projects demonstrating technical expertise and problem-solving skills
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden animate-slide-up">
+            <div class="bg-gradient-to-br from-blue-600 to-blue-500 h-32 flex items-center justify-center">
+              <div class="text-white text-4xl">🏭</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Enterprise PLM UI (Intel)</h3>
+              <p class="text-slate-600 mb-4">2 years duration</p>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Built a responsive UI for Intel's internal PLM platform. Integrated complex workflows with validation and traceability tools for enhanced product lifecycle management.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden animate-slide-up">
+            <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-32 flex items-center justify-center">
+              <div class="text-white text-4xl">🐛</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Issue Lifecycle Management (Intel)</h3>
+              <p class="text-slate-600 mb-4">5 months duration</p>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Developed and maintained an Angular 12 dashboard to track and resolve system issues with comprehensive reporting and analytics capabilities.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden animate-slide-up">
+            <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-32 flex items-center justify-center">
+              <div class="text-white text-4xl">🎵</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Music School ERP System</h3>
+              <p class="text-slate-600 mb-4">3 years duration</p>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Delivered comprehensive scheduling and enrollment platform. Enabled real-time updates and automated student progress tracking for improved administrative efficiency.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden animate-slide-up">
+            <div class="bg-gradient-to-br from-orange-500 to-red-600 h-32 flex items-center justify-center">
+              <div class="text-white text-4xl">🏪</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Auto-Spare Inventory</h3>
+              <p class="text-slate-600 mb-4">1 year duration</p>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Created a real-time stock management system with user role management and automated stock reconciliation for streamlined inventory operations.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden animate-slide-up">
+            <div class="bg-gradient-to-br from-yellow-500 to-orange-500 h-32 flex items-center justify-center">
+              <div class="text-white text-4xl">🧾</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Construction Billing</h3>
+              <p class="text-slate-600 mb-4">6 months duration</p>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                Created a lightweight receipt generator with export-ready receipts, simplifying billing processes for construction projects and contractors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Get In Touch</h2>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Let's discuss your next project or explore collaboration opportunities
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-md transition-shadow duration-200 animate-slide-up">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div class="text-white text-2xl">📧</div>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">Email</h3>
+            <p class="text-slate-600 mb-4">Drop me a line anytime</p>
+            <a href="mailto:vishakh_talak@outlook.com" class="text-blue-600 hover:text-blue-700 font-medium">
+              vishakh_talak@outlook.com
+            </a>
+          </div>
+          
+          <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-md transition-shadow duration-200 animate-slide-up">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div class="text-white text-2xl">📞</div>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">Phone</h3>
+            <p class="text-slate-600 mb-4">Call me for urgent queries</p>
+            <div class="text-blue-600 font-medium">
+              <a href="tel:+919673366165" class="hover:text-blue-700">+91-9673366165</a><br>
+              <span>+91-8668706191</span>
+            </div>
+          </div>
+          
+          <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-md transition-shadow duration-200 animate-slide-up">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div class="text-white text-2xl">📍</div>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">Location</h3>
+            <p class="text-slate-600 mb-4">Currently based in</p>
+            <div class="text-blue-600 font-medium">
+              Indradhanusha Apt Bunglow D2<br>
+              Borda Margao 403602<br>
+              Goa, India
+            </div>
+          </div>
+        </div>
+        
+        <!-- Education Section -->
+        <div class="bg-slate-50 p-8 rounded-xl animate-slide-up">
+          <h3 class="text-2xl font-semibold text-slate-800 mb-6 text-center">Education</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="text-white text-2xl">🎓</div>
+              </div>
+              <h4 class="text-lg font-semibold text-slate-800 mb-2">Master of Computer Applications</h4>
+              <p class="text-slate-600">Manipal Institute of Technology, Manipal</p>
+              <p class="text-slate-500">2017</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="text-white text-2xl">🎓</div>
+              </div>
+              <h4 class="text-lg font-semibold text-slate-800 mb-2">Bachelor of Computer Applications</h4>
+              <p class="text-slate-600">Shree Damodar College, Goa</p>
+              <p class="text-slate-500">2015</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-4">Vishakh Talak</h3>
+          <p class="text-slate-300 mb-6">Full Stack Developer</p>
+          <div class="flex justify-center space-x-6 mb-8">
+            <a href="mailto:vishakh_talak@outlook.com" class="text-slate-300 hover:text-white transition-colors duration-200">
+              📧
+            </a>
+            <a href="tel:+919673366165" class="text-slate-300 hover:text-white transition-colors duration-200">
+              📞
+            </a>
+          </div>
+          <p class="text-slate-400 text-sm">
+            © 2024 Vishakh Talak. All rights reserved. | Languages: English, Hindi, Marathi, Konkani
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Active navigation highlighting
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('nav a[href^="#"]');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          if (window.pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navItems.forEach(item => {
+          item.classList.remove('text-blue-600');
+          item.classList.add('text-slate-600');
+          if (item.getAttribute('href') === '#' + current) {
+            item.classList.remove('text-slate-600');
+            item.classList.add('text-blue-600');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
