@@ -3,50 +3,8 @@ import { Mail, Phone, Download, User } from "lucide-react";
 
 export default function HeroSection() {
   const handleDownloadResume = () => {
-    // Create a simple resume content
-    const resumeContent = `
-VISHAKH ARUN SHENVI TALAK
-Full Stack Developer | 7+ Years Experience
-
-Contact: vishakh_talak@outlook.com | +91-9673366165
-
-PROFILE SUMMARY
-• 7+ years of experience in building scalable web applications and delivering robust software solutions
-• Proficient in full software development life cycle with expertise in .NET, Angular and SQL Server
-• Skilled in identifying and debugging complex issues to ensure smooth application performance
-• A result-oriented individual with strong communication, analytical & interpersonal skills
-
-TECHNICAL SKILLS
-• Programming Languages: C#, JavaScript, TypeScript, SQL
-• Frontend: Angular, jQuery, Bootstrap, HTML5/CSS3
-• Backend: .NET, ASP.NET Web API, Entity Framework
-• Database: SQL Server
-
-WORK EXPERIENCE
-Software Developer – III | UST Global, Bangalore (July 2022 – Present)
-• Full-stack development for enterprise-grade web applications using Angular 14, ASP.NET Web API, and SQL Server
-• Designed and developed modular, reusable UI components and scalable RESTful APIs
-• Optimized API performance, significantly reducing response times across critical endpoints
-
-Senior Software Engineer | Compdhenu Software Solutions, Goa (Dec 2017 - July 2022)
-• Engineered Angular-based Single Page Applications (SPAs) with dynamic routing and reusable services
-• Developed backend services and data access layers using ASP.NET Web API and Entity Framework
-• Migrated legacy AngularJS interfaces to Angular 8+, enhancing performance and client satisfaction
-
-EDUCATION
-MCA (Computers) from Manipal Institute of Technology, Manipal - 2017
-BCA from Shree Damodar College, Goa - 2015
-    `;
-
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Vishakh_Talak_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    // Download the actual PDF resume from the server
+    window.open('/api/resume', '_blank');
   };
 
   const handleContactClick = () => {
