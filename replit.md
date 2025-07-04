@@ -6,20 +6,26 @@ This is a professional portfolio website for Vishakh Talak, a Full Stack Develop
 
 ## System Architecture
 
-### Full-Stack Architecture
-The application follows a monorepo structure with clear separation between frontend and backend concerns:
-- **Frontend**: React-based SPA with TypeScript
-- **Backend**: Express.js server with TypeScript
+### Monorepo Structure with Separate Configurations
+The application follows a monorepo structure with separate package.json and configuration files for client and server:
+- **Root**: Orchestration scripts and shared dependencies
+- **Client**: React SPA with dedicated Vite configuration
+- **Server**: Express.js API with separate TypeScript setup
 - **Database**: PostgreSQL with Drizzle ORM
 - **Styling**: Tailwind CSS with shadcn/ui components
-- **Build System**: Vite for frontend bundling
 
 ### Directory Structure
 ```
-├── client/          # React frontend application
-├── server/          # Express.js backend
+├── client/          # React frontend with own package.json
+│   ├── src/         # React components and pages
+│   ├── package.json # Client-specific dependencies
+│   ├── vite.config.ts
+│   ├── tsconfig.json
+│   └── tailwind.config.ts
+├── server/          # Express.js backend with own package.json
+│   ├── package.json # Server-specific dependencies
+│   └── tsconfig.json
 ├── shared/          # Shared TypeScript types and schemas
-├── migrations/      # Database migration files
 └── dist/           # Production build output
 ```
 
@@ -88,14 +94,15 @@ The application follows a monorepo structure with clear separation between front
 ## Deployment Strategy
 
 ### Development
-- Uses Vite dev server with HMR (Hot Module Replacement)
-- Express server runs with tsx for TypeScript execution
+- **Client**: Vite dev server on port 3000 with HMR and API proxy
+- **Server**: Express server on port 5000 with tsx watch mode
+- **Concurrent**: Both client and server run together via concurrently
 - Database migrations via `drizzle-kit push`
 
 ### Production Build
-1. Frontend build via Vite to `dist/public`
-2. Backend build via ESBuild to `dist/index.js`
-3. Static file serving from Express server
+1. **Client build**: TypeScript compilation + Vite build to `dist/public`
+2. **Server build**: TypeScript compilation + ESBuild bundle to `dist/index.js`
+3. **Deployment**: Single Express server serves both API and static files
 4. Environment variables for database connection
 
 ### Environment Configuration
@@ -104,6 +111,7 @@ The application follows a monorepo structure with clear separation between front
 - `REPL_ID` for Replit-specific features
 
 ## Changelog
+- January 4, 2025. Restructured project with separate client/server configurations
 - June 30, 2025. Initial setup
 
 ## User Preferences
